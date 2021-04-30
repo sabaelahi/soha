@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import Select ,{ components } from 'react-select';
 import axios from "axios";
 import './style.css'
+import { useTranslation } from 'react-i18next';
 
 const CaretDownIcon = () => {
     return <img src={"/images/btn-search.png"} className={"bg-img-search pointer"}/>
@@ -48,27 +49,31 @@ const customStyles = {
     }
 }
 const Club = () => {
-    const [options , setOptions] = useState([])
+    const [options , setOptions] = useState([]);
+    const { t, i18n } = useTranslation()
     useEffect(()=>{
         axios.get("https://restcountries.eu/rest/v2/all")
             .then(res=> {
                 const data = res.data
-                const options = data.map(d => ({
+                const option = data.map(d => ({
                     "value" : d.name,
                     "label" : d.name
-                }))
-                setOptions(options);
+                }));
+                setOptions(option);
             })
             .catch(err=>console.log(err))
-    })
+    },[])
+
     return (
         <div>
-            <h1 className={"title text-center"}>Selct your Contry</h1>
+            <h1 className={"title text-center"}>{t("select your country")}</h1>
            <div className={"mt-5"}>
-               <Select className={"tes"} options={options} isClearable styles={customStyles} placeholder={"Select Your Contry"}
-                       components={{ DropdownIndicator ,
-                           IndicatorSeparator: () => null}}
-               >
+               <Select
+                       options={options}
+                       isClearable
+                       styles={customStyles}
+                       placeholder={t("select your country")}
+                       components={{ DropdownIndicator , IndicatorSeparator: () => null}}>
                </Select>
            </div>
         </div>

@@ -5,6 +5,7 @@ import {BrowserRouter, Route , Switch} from "react-router-dom";
 import Social from "./pages/Social";
 import Page404 from "./pages/Page404";
 import Club from "./pages/club/Club";
+import './i18n';
 
 function App() {
   return (

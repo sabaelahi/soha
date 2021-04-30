@@ -1,14 +1,18 @@
-import React from 'react';
+import React , {Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import reportWebVitals from './reportWebVitals';
+import './i18n';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Suspense fallback={<div></div>}>
+          <React.StrictMode>
+            <App />
+          </React.StrictMode>
+    </Suspense>,
   document.getElementById('root')
 );
 
