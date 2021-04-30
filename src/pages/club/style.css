@@ -1,0 +1,43 @@
+.css-1wa3eu0-placeholder{
+    color: #DDFE5A !important;
+}
+.css-tlfecz-indicatorContainer{
+    margin-right: -8px;
+}
+.css-1gtu0rj-indicatorContainer{
+    margin-right: -8px;
+}
+/*.css-1gtu0rj-indicatorContainer img{*/
+/*    background-color: red;*/
+/*}*/
+.bg-img-search{
+    background-color: #DDFE5A;
+    border-radius: 50px;
+}
+.mt-100{
+    margin-top: 100px;
+}
+.css-tj5bde-Svg{
+    color: #DDFE5A;
+    cursor: pointer;
+}
+.css-26l3qy-menu {
+    margin: 0 !important;
+}
+
+.css-26l3qy-menu ::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.css-26l3qy-menu ::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.css-26l3qy-menu ::-webkit-scrollbar-thumb
+{
+    background-color: #888888;
+}
