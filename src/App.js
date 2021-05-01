@@ -2,7 +2,7 @@ import Layout from "./components/layout/Layout";
 import Home from "./pages/home/Home";
 import React from "react";
 import {BrowserRouter, Route , Switch} from "react-router-dom";
-import Social from "./pages/Social";
+import Social from "./pages/social/Social";
 import Page404 from "./pages/Page404";
 import Club from "./pages/club/Club";
 import './i18n';

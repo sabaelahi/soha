@@ -24,6 +24,7 @@
     top: 73px;
     left: 0;
     display: none;
+    z-index: 1000;
     background-color:#DDFE5A;
 }
 .dropdown-menu-item{
